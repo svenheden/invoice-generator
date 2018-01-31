@@ -1,0 +1,22 @@
+{
+    "name": "Lorem Ipsum AB",
+    "footer": [
+        [
+            "Lorem Ipsum AB",
+            "Loremgatan 1A",
+            "123 45 Göteborg"
+        ],
+        [
+            "lorem@ipsum.se",
+            "Mobil 073-712 34 56"
+        ],
+        [
+            "Org.nr 123456-7890",
+            "Momsnr SE1234567890",
+            "Godkänd för F-skatt"
+        ],
+        [
+            "Bankgironummer 123-4567"
+        ]
+    ]
+}
