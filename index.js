@@ -18,6 +18,7 @@ app.get('/', (req, res, next) => {
 
     fs.readdir(invoicesPath, (err, files) => {
         const items = files
+            .filter(file => /^[^\.]/.test(file))
             .map(file => file.replace(/.json/, ''))
             .map(invoiceId => `<li><a href="/${invoiceId}">${invoiceId}</a></li>`);
 
