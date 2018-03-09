@@ -20,7 +20,8 @@ app.get('/', (req, res, next) => {
         const items = files
             .filter(file => /^[^\.]/.test(file))
             .map(file => file.replace(/.json/, ''))
-            .map(invoiceId => `<li><a href="/${invoiceId}">${invoiceId}</a></li>`);
+            .map(invoiceId => `<li><a href="/${invoiceId}">${invoiceId}</a></li>`)
+            .join('');
 
         res.send(`<ul>${items}</ul>`);
     });
