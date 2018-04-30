@@ -74,11 +74,26 @@ th {
 
 th,
 tbody td {
-    padding: .5em 0;
+    vertical-align: top;
+    padding: .5em;
+}
+
+th:first-child,
+tbody td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+tbody td:last-child {
+    padding-right: 0;
 }
 
 tfoot {
     display: table-row-group;
+}
+
+tfoot td {
+    padding: 0 .25em;
 }
 
 tfoot td:first-child {
@@ -97,6 +112,7 @@ tfoot tr:last-child td {
 
 .right {
     text-align: right;
+    white-space: nowrap;
 }
 
 footer {
