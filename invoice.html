@@ -71,13 +71,17 @@
         </main>
 
         <footer>
-            {{#company.footer}}
-                <div>
-                    {{#.}}
-                        <div>{{ . }}</div>
-                    {{/.}}
-                </div>
-            {{/company.footer}}
+            <small>{{ company.smallText }}</small>
+
+            <div class="columns">
+                {{#company.footer}}
+                    <div>
+                        {{#.}}
+                            <div>{{ . }}</div>
+                        {{/.}}
+                    </div>
+                {{/company.footer}}
+            </div>
         </footer>
     </body>
 </html>

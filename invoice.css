@@ -104,15 +104,23 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+}
 
+footer small {
+    display: block;
+    font-size: .75em;
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
+footer .columns {
     display: flex;
     justify-content: space-between;
-
     border-top: 1px solid #ccc;
     padding-top: .5em;
     font-size: .85em;
 }
 
-footer > div {
+footer .columns > div {
     flex: 100% 1 1;
 }
