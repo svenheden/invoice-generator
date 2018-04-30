@@ -53,7 +53,7 @@ app.listen(3000, () => console.log('Invoice generator listening on port 3000'));
 
 const decorateItemsWithTotal = items => items.map(item => ({
     ...item,
-    total: parseFloat(item.quantity) * item.price
+    total: parseFloat(item.quantity.replace(/,/, '.')) * item.price
 }));
 
 const calculateTotal = items => {
