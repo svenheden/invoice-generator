@@ -15,4 +15,4 @@ This is a tool for generating nice looking invoices from JSON documents. Print t
 
 ## License
 
-MIT © [Jonathan Persson](https://github.com/jonathanp)
+MIT © [Jonathan Svenheden](https://github.com/svenheden)
