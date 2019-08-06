@@ -10,8 +10,14 @@ app.set('view engine', 'html');
 app.set('views', __dirname);
 app.use(express.static(__dirname))
 
-const company = require('./company.json');
 const formatMoney = () => (text, render) => render(text).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' kr';
+
+let company = require('./company.json');
+
+company = {
+    ...company,
+    name: company.logo ? require(company.logo) : company.name
+};
 
 app.get('/', (req, res, next) => {
     const invoicesPath = path.join(__dirname, 'invoices');
