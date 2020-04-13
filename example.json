@@ -1,0 +1,41 @@
+{
+  "recipient": ["Foo Bar AB", "Foobarvägen 12", "123 45 Göteborg"],
+  "details": [
+    {
+      "key": "Fakturanummer",
+      "value": "82"
+    },
+    {
+      "key": "Er referens",
+      "value": "John Doe"
+    },
+    {
+      "key": "Datum",
+      "value": "2018-01-31"
+    },
+    {
+      "key": "Förfallodatum",
+      "value": "2018-02-30"
+    },
+    {
+      "key": "Betalningsvillkor",
+      "value": "30 dagar"
+    },
+    {
+      "key": "Bankgironummer",
+      "value": "123-4567"
+    }
+  ],
+  "items": [
+    {
+      "description": "Frontend-utveckling",
+      "quantity": "10 timmar",
+      "price": 1500
+    },
+    {
+      "description": "Boll",
+      "quantity": "1 st",
+      "price": 800
+    }
+  ]
+}
