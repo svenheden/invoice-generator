@@ -40,8 +40,12 @@ const calculateTotal = (items) => {
   return { exclVat, vat, inclVat };
 };
 
-const formatMoney = () => (text, render) =>
-  render(text).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " kr";
+const formatMoney = () => (text, render) => {
+  const amount = parseFloat(render(text));
+  const str = amount.toFixed(amount !== Math.round(amount) ? 2 : 0);
+
+  return str.replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " kr";
+};
 
 const generatePdf = async (invoice, outputFilename) => {
   const browser = await puppeteer.launch();
