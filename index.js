@@ -17,6 +17,24 @@ const generateHtml = async (invoice) => {
     company,
     invoice: {
       ...invoice,
+      details: invoice.details.map((detail) => {
+        if (detail.key === "Förfallodatum") {
+          const date = new Date(
+            invoice.details.find((x) => x.key === "Datum").value
+          );
+          const terms = parseInt(
+            invoice.details.find((x) => x.key === "Betalningsvillkor").value
+          );
+          date.setDate(date.getDate() + terms);
+
+          return {
+            ...detail,
+            value: date.toLocaleDateString("sv-SE"),
+          };
+        } else {
+          return detail;
+        }
+      }),
       items: itemsWithTotal,
       total: calculateTotal(itemsWithTotal),
     },
